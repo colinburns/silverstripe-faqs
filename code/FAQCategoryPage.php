@@ -12,8 +12,8 @@ class FAQCategoryPage extends Page {
 	
 		$fields = parent::getCMSFields();
 			
-		$fields->addFieldToTab("Root.Content.Main", new HeaderField('NewsletterFolder', 'Select the Newsletter Folder', 3));
-		$fields->addFieldToTab("Root.Content.Main", new DropdownField('CategoryName','Select a Category of FAQ\'s to display', DataObject::get("FAQ", "")->map("Category", "Category", "-- Select the category to display --")), 'Content');
+		$fields->addFieldToTab("Root.Main", new HeaderField('NewsletterFolder', 'Select the Newsletter Folder', 3));
+		$fields->addFieldToTab("Root.Main", new DropdownField('CategoryName','Select a Category of FAQ\'s to display', DataObject::get("FAQ", "")->map("Category", "Category", "-- Select the category to display --")), 'Content');
 		
 		return $fields;
 		

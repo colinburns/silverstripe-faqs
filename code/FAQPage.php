@@ -16,7 +16,7 @@ class FAQPage extends Page {
 //            'FAQ'
 //        );
         $manager = new DataObjectManager($this, 'FAQs', 'FAQ', NULL, NULL, NULL, 'Ranking');
-        $fields->addFieldToTab("Root.Content.FAQ", $manager);
+        $fields->addFieldToTab("Root.FAQ", $manager);
          
         return $fields;
         
@@ -43,7 +43,7 @@ class FAQPage_Controller extends Page_Controller {
 
         if($FAQs) foreach($FAQs AS $FAQ){
             // Here we want to get all the proposals for a given item
-            if(Director::urlParam('OtherID') == $FAQ->ID){
+            if(Controller::curr()->getRequest()->param('OtherID') == $FAQ->ID){
                 $FAQ->Display = true;
             }else{
                 $FAQ->Display = false;
