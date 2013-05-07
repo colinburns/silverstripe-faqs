@@ -1,0 +1,22 @@
+{
+    "name": "colinburns/silverstripe-faqs",
+    "description": "A frequently asked questions module that use Gridfield to allow users to add and maintain a list of Frequently Asked Questions ",
+    "type": "silverstripe-module",
+    "keywords": ["silverstripe", "faq"],
+    "authors": [
+        {
+            "name": "Colin Burns",
+        }
+    ],
+    "require":
+    {
+        "silverstripe/framework": "3.*",
+        "silverstripe/cms": "3.*",
+    },
+		"extra": {
+			"installer-name": "faqs"
+		},		
+    "support": {
+        "issues": "https://github.com/colinburns/silverstripe-faqs/issues"
+    } 
+}
