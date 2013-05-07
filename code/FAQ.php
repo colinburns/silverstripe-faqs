@@ -22,15 +22,15 @@ class FAQ extends DataObject {
     );
      
     //Fields for the DOM Popup
-    public function getCMSFields()
-    {
-        return new FieldList(
-            new TextField('Question'),
-            new TextField('Category'),
-            new TextField('Ranking', 'Ranking [sorted by Category and then Ranking - lower numbers are displayed first]'),
-            new SimpleTinyMCEField('Answer', 'Answer', 5)
-        );
-    }
+//    public function getCMSFields()
+//    {
+//        return new FieldList(
+//            new TextField('Question'),
+//            new TextField('Category'),
+//            new TextField('Ranking', 'Ranking [sorted by Category and then Ranking - lower numbers are displayed first]'),
+//            new SimpleTinyMCEField('Answer', 'Answer', 5)
+//        );
+//    }
 	
 	//Needed for sidebar to work
 	function canView($member = null)

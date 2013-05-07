@@ -15,8 +15,15 @@ class FAQPage extends Page {
 //            'FAQs',
 //            'FAQ'
 //        );
-        $manager = new DataObjectManager($this, 'FAQs', 'FAQ', NULL, NULL, NULL, 'Ranking');
-        $fields->addFieldToTab("Root.FAQ", $manager);
+//        $manager = new DataObjectManager($this, 'FAQs', 'FAQ', NULL, NULL, NULL, 'Ranking');
+        $fields->addFieldToTab("Root.FAQ", 
+					GridField::create('FAQs','', 
+						$this->FAQs(),
+						GridFieldConfig_RelationEditor::create()
+					)				
+				);
+				
+				
          
         return $fields;
         
