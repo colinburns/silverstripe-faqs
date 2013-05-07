@@ -1,6 +1,4 @@
-        <% include Header %>
-        <% include MainNavigation %>
-        <% include Sidebar %>
+
         <div id="Content" class="typography">
             <div id="Breadcrumbs">$Breadcrumbs</div>
             <h1>{$MetaTitle}</h1>

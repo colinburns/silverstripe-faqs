@@ -29,6 +29,8 @@ class FAQCategoryPage_Controller extends Page_Controller {
 
 	public function init() {
 		parent::init();
+		Requirements::javascript('faqs/javascript/jquery.toggle.js');
+		Requirements::css('faqs/css/faqs.css');		
 	}
 	
 	function GetFAQs() {

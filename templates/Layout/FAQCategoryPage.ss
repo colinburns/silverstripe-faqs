@@ -1,15 +1,13 @@
 		<div id="Content">
-                    <% include LeftColumn %>
                     <div id="MainColumn" class="typography">
                         <div id="Breadcrumbs">$Breadcrumbs</div>
-                        <% include FeatureImage %>
                         $Content
                         <% if GetFAQs %>
                             <h3>Questions & Answers</h3>
                             <dl>
                                 <% control GetFAQs %>
                                     <dt>{$Pos}. <a href="#">$Question</a></dt>
-                                    <dd style="display:none;">$Answer.XML</dd>
+                                    <dd style="display:none;">$Answer</dd>
                                 <% end_control %>
                             </dl>
                         <% else %>
