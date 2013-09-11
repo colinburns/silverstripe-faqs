@@ -9,12 +9,18 @@ class FAQCategoryPage extends Page {
 	);
 	
 	function getCMSFields() {
-	
+
 		$fields = parent::getCMSFields();
-			
+
+        $faqs = FAQ::get();
+        $categoryMap = array();
+        if($faqs)foreach($faqs AS $faq){
+            $categoryMap[$faq->Category] = $faq->Category;
+        }
+
 		$fields->addFieldToTab("Root.Main", new HeaderField('NewsletterFolder', 'Select the Newsletter Folder', 3));
-		$fields->addFieldToTab("Root.Main", new DropdownField('CategoryName','Select a Category of FAQ\'s to display', DataObject::get("FAQ", "")->map("Category", "Category", "-- Select the category to display --")), 'Content');
-		
+		$fields->addFieldToTab("Root.Main", new DropdownField('CategoryName','Select a Category of FAQ\'s to display', $categoryMap), 'Content');
+
 		return $fields;
 		
 	}
@@ -34,7 +40,7 @@ class FAQCategoryPage_Controller extends Page_Controller {
 	}
 	
 	function GetFAQs() {
-            return DataObject::get("FAQ", "Category = '{$this->CategoryName}'", "Created ASC", "", "");
+        return DataObject::get("FAQ", "Category = '{$this->CategoryName}'", "Created ASC", "", "");
 	}
 	
 }
