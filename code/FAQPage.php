@@ -1,8 +1,8 @@
 <?php 
  
 class FAQPage extends Page {
-     
-    static $has_many = array(
+
+    private static $has_many = array(
         'FAQs' => 'FAQ'
     );
      
@@ -30,8 +30,8 @@ class FAQPage extends Page {
         
         
     }
-    
-    static $icon = "themes/icentre/images/treeicons/pencil_add";
+
+    private static $icon = "themes/icentre/images/treeicons/pencil_add";
     
 }
  

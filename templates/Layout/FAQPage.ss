@@ -6,10 +6,10 @@
             <% if FAQs %>
                 <h2>Questions & Answers</h2>
                 <dl>
-                    <% control FAQs %>
+                    <% loop FAQs %>
                         <dt>{$Pos}. <a href="#">$Question</a></dt>
                         <dd style="display:none;">$Answer</dd>
-                    <% end_control %>
+                    <% end_loop %>
                 </dl>
             <% else %>
                 <blockquote>

@@ -5,10 +5,10 @@
                         <% if GetFAQs %>
                             <h3>Questions & Answers</h3>
                             <dl>
-                                <% control GetFAQs %>
+                                <% loop GetFAQs %>
                                     <dt>{$Pos}. <a href="#">$Question</a></dt>
                                     <dd style="display:none;">$Answer</dd>
-                                <% end_control %>
+                                <% end_loop %>
                             </dl>
                         <% else %>
                             <blockquote>

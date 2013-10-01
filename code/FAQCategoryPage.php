@@ -1,11 +1,11 @@
 <?php
 class FAQCategoryPage extends Page {
 
-	public static $db = array(
+    private static $db = array(
 		"CategoryName" => "Varchar(50)"
 	);
 
-	public static $has_one = array(
+    private static $has_one = array(
 	);
 	
 	function getCMSFields() {
@@ -24,14 +24,13 @@ class FAQCategoryPage extends Page {
 		return $fields;
 		
 	}
-	
-	static $icon = "cms/images/famfam-silk/pencil_go";
+
+    private static $icon = "cms/images/famfam-silk/pencil_go";
 
 }
 class FAQCategoryPage_Controller extends Page_Controller {
 
-	public static $allowed_actions = array (
-	);
+    private static $allowed_actions = array ();
 
 	public function init() {
 		parent::init();
